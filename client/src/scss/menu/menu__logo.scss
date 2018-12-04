@@ -1,0 +1,20 @@
+@import "../variables";
+@import "../_mixins/rem";
+
+.menu__logo {
+  margin-bottom: rem(17);
+  display: block;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-black-active);
+  text-decoration: none;
+  font-size: rem(28);
+  line-height: rem(50);
+  font-weight: bold;
+  text-transform: capitalize;
+
+  &:hover,
+  &:active {
+    color: var(--color-blue);
+  }
+}

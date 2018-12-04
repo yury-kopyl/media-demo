@@ -1,0 +1,9 @@
+.filter__item_added {
+  .filter__btn {
+    color: var(--color-blue) !important;
+
+    &:nth-child(1) {
+      @extend .btn_disabled;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.card__tools {
+  flex: 0 1 50%;
+  text-align: right;
+  font-size: var(--font-size-small);
+  display: none;
+  color: var(--color-white-opacity-05);
+  align-self: flex-end;
+
+  @at-root .card:hover .card__tools {
+    display: block;
+  }
+}

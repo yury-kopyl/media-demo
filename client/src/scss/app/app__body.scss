@@ -1,0 +1,14 @@
+%app__body {
+	background-color: var(--bgc-base);
+	font: var(--font-size-base) / var(--line-height-base) var(--font-family-base);
+	color: var(--color-white);
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow-y: hidden;
+	overflow-x: auto;
+	display: grid;
+	grid-template-areas: "menu search  account" "menu content filter" "menu content filter";
+	grid-template-columns: 230px 1fr 230px;
+	grid-template-rows: 50px 1fr;
+}

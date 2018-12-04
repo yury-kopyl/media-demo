@@ -1,0 +1,23 @@
+@import "../variables";
+@import "../_mixins/rem";
+
+.menu__link {
+  background-color: var(--color-black);
+  border: 1px solid var(--color-black-border);
+  color: inherit;
+  display: block;
+  font-size: var(--font-size-base);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: rem(10);
+  text-decoration: none;
+  margin-top: -1px;
+
+  &:hover {
+    background-color: var(--color-black-hover);
+  }
+
+  &:active {
+    background-color: var(--color-black-active);
+  }
+}

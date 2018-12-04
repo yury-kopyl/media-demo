@@ -1,0 +1,16 @@
+[
+  {
+    "email": "admin@media.dev",
+    "password": "$2b$10$wTFI/UIbBYYfQh80WPVsYu6gDctYWdlmOkA/JngmYCF/EtbnYc/0e",
+    "permission": 2,
+    "created": "new Date()",
+    "confirmed": true
+  },
+  {
+    "email": "user@media.dev",
+    "password": "$2b$10$8tZXhwIEyR8Pzdzzczisd.jEaF/NShD9vywS8mklpE6vcbP8JSDem",
+    "permission": 0,
+    "created": "new Date()",
+    "confirmed": true
+  }
+]

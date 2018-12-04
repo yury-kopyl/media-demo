@@ -1,0 +1,5 @@
+@import "../_mixins/create-btn";
+
+.btn_theme_gray {
+  @include create-btn("gray", true);
+}

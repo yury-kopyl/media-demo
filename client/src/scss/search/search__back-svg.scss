@@ -1,0 +1,16 @@
+.search__back-svg {
+  box-sizing: border-box;
+  width: 1.5rem;
+  height: 90%;
+  vertical-align: middle;
+  fill: var(--color-white-opacity-05);
+
+  @at-root .search__back {
+    &:hover,
+    &:active {
+      .search__back-svg {
+        fill: var(--color-white);
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<a class="account__name" href="javascript:void(0);" [ngClass]="{'account__name_active': isOpen}" (click)="openForm()">{{user.email}}</a>
+
+<div class="account__blocks">
+	<div class="account__nav account__nav_theme_full">
+		<button class="btn btn_theme_blue" [ngClass]="{'btn_active': form.isOpen}" (click)="changePswd()">Сменить пароль</button>
+		<button class="btn btn_theme_gray" (click)="logout()">Выход</button>
+	</div>
+	<div class="account__body">
+		<div *ngIf="form.isOpen">
+			<div *ngIf="feedback && feedback.control === 'other'" [ngClass]="'account__info text-' + feedback.type" [innerHTML]="feedback.text"></div>
+			<form *ngIf="!feedback || feedback.control !== 'other'" [formGroup]="form.group" (ngSubmit)="onSubmitForm()">
+				<div class="input">
+					<label class="input__label">Старый пароль</label>
+					<input class="input__control" name="password" type="password"
+						   formControlName="password"
+						   [ngClass]="{'input__control_theme_red' : (!form.group.controls.password.pristine && form.group.controls.password.errors) || (feedback && feedback.control === 'password')}">
+					<div *ngIf="!(form.group.controls.password.pristine && form.group.controls.password.errors) || (feedback && feedback.control === 'password')"
+						 class="input__message input__message_theme_red">
+						<span *ngIf="form.group.controls.password.errors && form.group.controls.password.errors.required">Required!</span>
+						<span *ngIf="form.group.controls.password.errors && form.group.controls.password.errors.minlength">Must be at least {{form.group.controls.password.errors.minlength.requiredLength}} letters</span>
+						<span *ngIf="feedback && feedback.control === 'password'">{{feedback.text}}</span>
+					</div>
+				</div>
+
+				<div class="input">
+					<label class="input__label">Новый пароль</label>
+					<input class="input__control" name="newPswd" type="password"
+						   formControlName="newPswd"
+						   [ngClass]="{'input__control_theme_red' : (!form.group.controls.newPswd.pristine && form.group.controls.newPswd.errors) || (!form.group.controls.newPswd.pristine && form.group.errors)}">
+					<div *ngIf="(!form.group.controls.newPswd.pristine && form.group.controls.newPswd.errors) || (!form.group.controls.newPswd.pristine && form.group.errors)"
+						 class="input__message input__message_theme_red">
+						<span *ngIf="form.group.controls.newPswd.errors && form.group.controls.newPswd.errors.required">Required!</span>
+						<span *ngIf="form.group.controls.newPswd.errors && form.group.controls.newPswd.errors.minlength">Must be at least {{form.group.controls.newPswd.errors.minlength.requiredLength}} letters</span>
+						<span *ngIf="form.group.errors && form.group.errors.samePswd">The new password is identical to the old one</span>
+					</div>
+				</div>
+
+				<button type="submit" class="account__submit btn btn_theme_blue" [disabled]="!form.group.valid || form.pending">Сменить пароль</button>
+			</form>
+		</div>
+	</div>
+</div>

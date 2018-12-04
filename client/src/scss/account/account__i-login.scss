@@ -1,0 +1,10 @@
+.account__i-login {
+	vertical-align: top;
+	display: inline-block;
+	height: 16px;
+	fill: var(--color-white);
+
+	@at-root .account__name_active & {
+		fill: var(--color-blue);
+	}
+}

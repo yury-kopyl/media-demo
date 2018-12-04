@@ -1,0 +1,7 @@
+.account__name_active {
+  color: var(--color-blue);
+
+  & + .account__blocks {
+    display: block;
+  }
+}

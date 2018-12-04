@@ -1,0 +1,35 @@
+<div class="app__content">
+	<!-- input -->
+	<div class="input">
+		<label class="input__label">Label</label>
+		<input class="input__control" type="text" name="name" placeholder="Placeholder" autocomplete="off">
+		<div class="input__message input__message_theme_gray">This is required field</div>
+	</div>
+	
+	<div class="input">
+		<label class="input__label">Label</label>
+		<input class="input__control" type="text" name="name" value="Bond, James Bond" placeholder="Placeholder" autocomplete="off">
+	</div>
+	
+	<div class="input">
+		<label class="input__label">Label</label>
+		<input class="input__control input__control_theme_red" type="text" name="name" placeholder="Placeholder" autocomplete="off">
+		<div class="input__message input__message_theme_red">Name must be required</div>
+	</div>
+	
+	<div class="input">
+		<label class="input__label">Label</label>
+		<input class="input__control input__control_theme_red" type="text" name="name" value="Admin" placeholder="Placeholder" autocomplete="off">
+		<div class="input__message input__message_theme_red">This name not available</div>
+	</div>
+	<!-- input -->
+</div>
+
+<style>
+  .input {
+    max-width: 300px;
+  }
+  .input + .input {
+    margin-top: 10px;
+  }
+</style>

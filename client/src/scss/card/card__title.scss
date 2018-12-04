@@ -1,0 +1,10 @@
+.card__title {
+  color: var(--color-white);
+  text-decoration: none;
+  margin-top: 0.5rem;
+
+  &:hover,
+  &:active {
+    color: var(--color-blue);
+  }
+}

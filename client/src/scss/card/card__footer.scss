@@ -1,0 +1,12 @@
+.card__footer {
+  align-content: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  border-left: 1px solid var(--color-black-border);
+  border-right: 1px solid var(--color-black-border);
+  border-bottom: 1px solid var(--color-black-border);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+}

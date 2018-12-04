@@ -1,0 +1,61 @@
+<a class="account__name" [ngClass]="{'account__name_active': isOpen}" href="javascript:void(0);" (click)="openForm()">
+	Вход
+	<svg class="account__i-login" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 468.238 468.238">
+		<path d="M234.119,0C104.83,0,0.002,104.821,0.002,234.125c0,129.298,104.821,234.113,234.116,234.113s234.117-104.815,234.117-234.113S363.408,0,234.119,0z M285.303,213.018V373.82H179.125V208.665c-9.617-12.038-15.403-27.249-15.403-43.864c0-38.869,31.522-70.379,70.397-70.379c38.878,0,70.395,31.516,70.395,70.379C304.513,183.479,297.172,200.41,285.303,213.018z"></path>
+	</svg>
+</a>
+
+<div class="account__blocks" *ngIf="isOpen">
+	<div class="account__nav">
+		<button class="account__nav-link btn btn_theme_black" [ngClass]="{'btn_active': form.type === 0}" (click)="changeForm(0)">Регистрация</button>
+		<button class="account__nav-link btn btn_theme_black" [ngClass]="{'btn_active': form.type === 1}" (click)="changeForm(1)">Вход</button>
+		<button class="account__nav-link btn btn_theme_black" [ngClass]="{'btn_active': form.type === 2}" (click)="changeForm(2)">Восстановление</button>
+	</div>
+	<div class="account__body">
+		<div *ngIf="feedback && feedback.control === 'other'" [ngClass]="'text-' + feedback.type" [innerHTML]="feedback.text"></div>
+		<form *ngIf="!feedback || feedback.control !== 'other'" [formGroup]="form.group" (ngSubmit)="onSubmitForm()">
+			<div class="input">
+				<label class="input__label">Эл. почта</label>
+				<input class="input__control" type="email" name="email"
+					   formControlName="email"
+					   [ngClass]="{'input__control_theme_red' : (!form.group.controls.email.pristine && form.group.controls.email.errors) || (feedback && feedback.control === 'email')}">
+				<div class="input__message input__message_theme_red" *ngIf="!form.group.controls.email.pristine && form.group.controls.email.errors">
+					<span *ngIf="form.group.controls.email.errors.required">Required!</span>
+					<span *ngIf="form.group.controls.email.errors.email">Should be email</span>
+				</div>
+				<div class="input__message input__message_theme_red"
+					 *ngIf="feedback && feedback.control === 'email'"
+					 [innerHTML]="feedback.text"></div>
+			</div>
+
+			<div class="input" *ngIf="form.type !== 2">
+				<label class="input__label">Пароль</label>
+				<input class="input__control" type="password" name="password" autocomplete="off"
+					   formControlName="password"
+					   [ngClass]="{'input__control_theme_red' : (!form.group.controls.password.pristine && form.group.controls.password.errors) || (feedback && feedback.control === 'password')}">
+				<div class="input__message input__message_theme_red" *ngIf="!form.group.controls.password.pristine && form.group.controls.password.errors">
+					<span *ngIf="form.group.controls.password.errors.required">Required!</span>
+					<span *ngIf="form.group.controls.password.errors.minlength">Must be at least {{form.group.controls.password.errors.minlength.requiredLength}} letters</span>
+				</div>
+				<div class="input__message input__message_theme_red"
+					 *ngIf="feedback && feedback.control === 'password'"
+					 [innerHTML]="feedback.text"></div>
+			</div>
+
+			<div  class="account__info" *ngIf="form.type === 0">
+				Откроються новые функции:
+				<ul class="account__list">
+					<li>синхронизация между компьютерами</li>
+					<li>избранное</li>
+					<li>узнать о выходе</li>
+					<li>история просмотров</li>
+					<li>возможность скачивать</li>
+				</ul>
+			</div>
+
+			<button type="submit" class="account__submit btn btn_theme_blue" [disabled]="!form.group.valid || form.pending">
+				{{form.type === 0 ? 'Зарегистрироваться' : form.type === 1 ? 'Войти' : 'Напомнить пароль'}}
+			</button>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,14 @@
+.btn {
+  color: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-family: inherit;
+  border: none;
+  padding: 12px 22px;
+  min-width: var(--btn-border-width);
+}

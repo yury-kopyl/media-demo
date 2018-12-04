@@ -1,0 +1,33 @@
+.input__control {
+  border: var(--btn-border-width) solid var(--color-black-border);
+  background-color: var(--color-disabled);
+  font-size: var(--font-size-small);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 16px;
+  line-height: 12px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  min-width: 0;
+
+  &::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 0.5;
+  }
+
+  &::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 0.5;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-disabled-focused);
+  }
+
+  &:focus {
+    border-color: var(--color-blue-border);
+  }
+}

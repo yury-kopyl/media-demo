@@ -1,0 +1,10 @@
+.btn_theme_transparent {
+  background-color: transparent;
+  color: var(--color-white-opacity-05);
+  font-weight: normal;
+
+  &:hover,
+  &:active {
+    color: var(--color-white);
+  }
+}

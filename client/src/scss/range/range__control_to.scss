@@ -1,0 +1,9 @@
+.range__control_to {
+  position: relative;
+  top: -16px;
+  background-color: transparent;
+
+  &::-moz-range-track {
+    background-color: transparent;
+  }
+}

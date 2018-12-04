@@ -1,0 +1,6 @@
+.app__content {
+	grid-area: content;
+	overflow-x: hidden;
+	overflow-y: auto;
+	min-width: calc(1024px - 460px);
+}

@@ -1,0 +1,127 @@
+<div class="app__content">
+	<!-- filter -->
+  <form class="filter menu">
+    <a href="javascript:void(0);" class="filter__title">Жанры</a>
+    <div class="filter__block">
+      <div class="filter__item">
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">+</button>
+        <button type="button" class="filter__btn filter__item-name btn btn_theme_black">Комедия</button>
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">&times;</button>
+      </div>
+      <div class="filter__item filter__item_added">
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">+</button>
+        <button type="button" class="filter__btn filter__item-name btn btn_theme_black">Боевик</button>
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">&times;</button>
+      </div>
+      <div class="filter__item">
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">+</button>
+        <button type="button" class="filter__btn filter__item-name btn btn_theme_black">Приключения</button>
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">&times;</button>
+      </div>
+      <div class="filter__item filter__item_removed">
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">+</button>
+        <button type="button" class="filter__btn filter__item-name btn btn_theme_black">Документальный</button>
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">&times;</button>
+      </div>
+      <div class="filter__item">
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">+</button>
+        <button type="button" class="filter__btn filter__item-name btn btn_theme_black">Семейный</button>
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">&times;</button>
+      </div>
+      <div class="filter__item">
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">+</button>
+        <button type="button" class="filter__btn filter__item-name btn btn_theme_black">Вестерн</button>
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">&times;</button>
+      </div>
+      <div class="filter__item">
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">+</button>
+        <button type="button" class="filter__btn filter__item-name btn btn_theme_black">Фантастика</button>
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">&times;</button>
+      </div>
+      <div class="filter__item">
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">+</button>
+        <button type="button" class="filter__btn filter__item-name btn btn_theme_black">Короткометражка</button>
+        <button type="button" class="filter__btn filter__btn_shape_square btn btn_shape_square btn_theme_black">&times;</button>
+      </div>
+      <div class="filter__footer">
+        <div class="filter__item">
+          <button type="button" class="btn btn_block btn_theme_gray">Сбросить</button>
+        </div>
+        <div class="filter__item">
+          <button type="button" class="btn btn_block btn_theme_blue">Отфильтровать</button>
+        </div>
+      </div>
+    </div>
+    <a href="javascript:void(0);" class="filter__title">Страны</a>
+    <a href="javascript:void(0);" class="filter__title">Год</a>
+    <div class="filter__block filter__block_range">
+      <div class="filter__range range">
+        <div class="range__step-area">
+          <div class="range__step">1892</div>
+          <div class="range__step">1924</div>
+          <div class="range__step">1955</div>
+          <div class="range__step">1987</div>
+          <div class="range__step">2018</div>
+        </div>
+        <input class="range__control js-range_from" name="yearFrom" type="range" min="1892" max="2018" value="1892">
+        <input class="range__control range__control_to js-range_to" name="yearTo" type="range" min="1892" max="2018" value="2018">
+      </div>
+      <div class="filter__footer">
+        <div class="filter__item">
+          <button type="button" class="btn btn_block btn_theme_gray">Сбросить</button>
+        </div>
+        <div class="filter__item">
+          <button type="button" class="btn btn_block btn_theme_blue">Отфильтровать (1892-2018)</button>
+        </div>
+      </div>
+    </div>
+    <a href="javascript:void(0);" class="filter__title">Рейтинг</a>
+    <div class="filter__block filter__block_range">
+      <div class="filter__range range">
+        <div class="range__step-area range__step-area_rating">
+          <div class="range__step">1</div>
+          <div class="range__step">2</div>
+          <div class="range__step">3</div>
+          <div class="range__step">4</div>
+          <div class="range__step">5</div>
+          <div class="range__step">6</div>
+          <div class="range__step">7</div>
+          <div class="range__step">8</div>
+          <div class="range__step">9</div>
+          <div class="range__step">10</div>
+        </div>
+        <input class="range__control js-range_from" name="ratingFrom" step="0.1" type="range" min="1" max="10" value="1">
+        <input class="range__control range__control_to js-range_to" name="ratingTo" step="0.1" type="range" min="1" max="10" value="10">
+      </div>
+      <div class="filter__footer">
+        <div class="filter__item">
+          <button type="button" class="btn btn_block btn_theme_gray">Сбросить</button>
+        </div>
+        <div class="filter__item">
+          <button type="button" class="btn btn_block btn_theme_blue">Отфильтровать (1-10)</button>
+        </div>
+      </div>
+    </div>
+    <a href="javascript:void(0);" class="filter__title">Качество</a>
+    <div class="filter__block filter__block_range">
+      <div class="filter__range range">
+        <div class="range__step-area range__step-area_rating">
+          <span class="badge badge_size_sm badge_theme_rounded badge_theme_red"></span>
+          <span class="badge badge_size_sm badge_theme_rounded badge_theme_orange"></span>
+          <span class="badge badge_size_sm badge_theme_rounded badge_theme_green"></span>
+        </div>
+        <input class="range__control js-range_from" name="qualityFrom" type="range" min="1" max="3" value="1">
+        <input class="range__control range__control_to js-range_to" name="qualityTo" type="range" min="1" max="3" value="3">
+      </div>
+      <div class="filter__footer">
+        <div class="filter__item">
+          <button type="button" class="btn btn_block btn_theme_gray">Сбросить</button>
+        </div>
+        <div class="filter__item">
+          <button type="button" class="btn btn_block btn_theme_blue">Отфильтровать (<span class="badge badge_size_xs badge_theme_rounded badge_theme_red"></span> - <span class="badge badge_size_xs badge_theme_rounded badge_theme_green"></span>)</button>
+        </div>
+      </div>
+    </div>
+  </form>
+	<!-- filter -->
+</div>

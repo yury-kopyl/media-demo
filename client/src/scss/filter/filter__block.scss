@@ -1,0 +1,14 @@
+.filter__block {
+  width: 800px;
+  background-color: var(--color-black-active);
+  border: 1px solid var(--color-black-border);
+  position: absolute;
+  top: 0;
+  right: 100%;
+  display: none;
+  flex-wrap: wrap;
+
+  @at-root .filter__title_active + & {
+    display: flex;
+  }
+}

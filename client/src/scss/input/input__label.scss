@@ -1,0 +1,11 @@
+@import "../variables";
+@import "../_mixins/rem";
+
+.input__label {
+  color: var(--color-description);
+  display: block;
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  padding-top: rem(9);
+  padding-bottom: rem(9);
+}

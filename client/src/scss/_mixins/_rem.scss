@@ -1,0 +1,11 @@
+@function rem($px, $context: $font-size-context) {
+  @if (unitless($px)) {
+    $px: $px * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $px / $context * 1rem;
+}

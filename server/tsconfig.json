@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": [ "es2015" ],
+    "outDir": "dist",
+    "types" : ["bcrypt", "body-parser", "dotenv", "express", "mongodb", "node", "nodemailer"]
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.ts"
+  ]
+}

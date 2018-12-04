@@ -1,0 +1,5 @@
+.filter__title_active {
+  @extend .menu__link_active;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}

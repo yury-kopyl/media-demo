@@ -1,0 +1,9 @@
+.btn_disabled,
+.btn[disabled] {
+	border: solid var(--btn-border-width) var(--color-black-border);
+	cursor: not-allowed;
+	background: var(--color-disabled) none !important;
+	color: var(--color-disabled-text);
+	padding-top: 11px;
+	padding-bottom: 11px;
+}

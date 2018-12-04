@@ -1,0 +1,9 @@
+@import "../variables";
+@import "../_mixins/rem";
+
+.menu_size_sm {
+  .menu__link {
+    padding: rem(7);
+    font-size: var(--font-size-small);
+  }
+}

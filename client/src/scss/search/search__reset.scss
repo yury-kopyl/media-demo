@@ -1,0 +1,8 @@
+.search__reset {
+  flex: 0 1 var(--btn-min-width);
+  border-left: none;
+
+  @at-root .search__control:placeholder-shown + & {
+    display: none;
+  }
+}

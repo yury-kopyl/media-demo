@@ -1,0 +1,8 @@
+@import "../variables";
+@import "../_mixins/rem";
+
+.input__message {
+  font-size: var(--font-size-smaller);
+  margin-top: rem(9);
+  line-height: rem(10);
+}

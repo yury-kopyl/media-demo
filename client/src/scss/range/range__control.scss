@@ -1,0 +1,38 @@
+.range__control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4px;
+  width: calc(100% - 2rem);
+  margin: 0;
+  background-color: transparent;
+  pointer-events: none;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 16px;
+    background: var(--color-white);
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 16px;
+    border: none;
+    border-radius: 0;
+    background: var(--color-white);
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  &::-moz-range-track {
+    height: 4px;
+    background-color: var(--color-blue);
+  }
+}

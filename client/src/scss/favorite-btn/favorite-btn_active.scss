@@ -1,0 +1,11 @@
+.favorite-btn_active {
+	.favorite-btn__path1,
+	.favorite-btn__path2 {
+		fill: var(--color-red);
+
+		&:hover,
+		&:active {
+			fill: var(--color-red-hover);
+		}
+	}
+}

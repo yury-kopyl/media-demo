@@ -1,0 +1,13 @@
+.filter__item_removed {
+  .filter__btn {
+    color: var(--color-red) !important;
+
+    &:nth-child(3) {
+      @extend .btn_disabled;
+    }
+  }
+
+  .filter__item-name {
+    text-decoration: line-through;
+  }
+}

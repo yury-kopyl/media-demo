@@ -1,0 +1,39 @@
+@mixin create-btn($color, $isGradient) {
+  @if ($isGradient) {
+    background-image: linear-gradient(
+      var(--color-#{$color}-gradient_from),
+      var(--color-#{$color}-gradient_to)
+    );
+
+    &:hover {
+      background-image: linear-gradient(
+        var(--color-#{$color}-gradient-hover_from),
+        var(--color-#{$color}-gradient-hover_to)
+      );
+    }
+
+    &:active,
+    &.btn_active {
+      background-image: linear-gradient(
+        var(--color-#{$color}-gradient-active_from),
+        var(--color-#{$color}-gradient-active_to)
+      );
+    }
+  } @else {
+    @if ($color == "black") {
+      border: solid var(--btn-border-width) var(--color-black-border);
+      padding-top: calc(var(--btn-py) - var(--btn-border-width));
+      padding-bottom: calc(var(--btn-py) - var(--btn-border-width));
+    }
+    background-color: var(--color-#{$color});
+
+    &:hover {
+      background-color: var(--color-#{$color}-hover);
+    }
+
+    &:active,
+    &.btn_active {
+      background-color: var(--color-#{$color}-active);
+    }
+  }
+}

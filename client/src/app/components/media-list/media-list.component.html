@@ -1,0 +1,2 @@
+<app-media-item *ngFor="let mediaItem of mediaItems" [mediaItem]="mediaItem" [customList]="customList"></app-media-item>
+<div class="grid__item grid__item_align-center" *ngIf="!mediaItems || !mediaItems.length">Медиа-файлы не найдены =(</div>

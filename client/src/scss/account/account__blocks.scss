@@ -1,0 +1,9 @@
+.account__blocks {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  box-sizing: border-box;
+  min-width: 320px;
+  background-color: var(--bgc-base);
+}

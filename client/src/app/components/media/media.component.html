@@ -1,0 +1,74 @@
+<div class="detail" *ngIf="media">
+	<div class="detail__title">{{media.name}}</div>
+
+	<div class="detail__btn-bar">
+		<div></div>
+		<div>
+			<button class="btn btn_theme_blue">Смотреть</button>&nbsp;<button class="btn btn_theme_gray">Скачать</button>
+		</div>
+		<div>
+			<a href="javascript:void(0);">
+				<svg [appFavorite]="{id: media.id, isFavorite: media.favorite}" *appIsAuthorized="true" class="favorite-btn favorite-btn_theme_detail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.199 482.199">
+					<path class="favorite-btn__path1" d="M354.236,39.66c-31.829-0.04-62.356,12.632-84.8,35.2l-28.32,28.32l-28.32-28.32
+                                  c-47.67-46.041-123.639-44.721-169.68,2.949c-44.914,46.503-44.914,120.228,0,166.731l198,198l198-198
+                                  c46.856-46.901,46.819-122.906-0.082-169.762C416.536,52.301,386.038,39.671,354.236,39.66z"></path>
+					<path class="favorite-btn__path2" d="M241.116,450.54c-2.122,0-4.156-0.844-5.656-2.344l-198-198
+                                  C-12.519,200.17-12.482,119.1,37.544,69.12c23.998-23.976,56.53-37.449,90.452-37.46c33.966-0.1,66.554,13.427,90.464,37.552
+                                  l22.656,22.656l22.664-22.664c49.87-49.98,130.813-50.069,180.793-0.199c0.066,0.066,0.133,0.133,0.199,0.199
+                                  c49.903,50.011,49.903,130.981,0,180.992l-198,198C245.272,449.696,243.238,450.539,241.116,450.54z M127.996,47.66
+                                  c-61.878,0.049-112,50.25-111.952,112.128c0.023,29.653,11.801,58.087,32.752,79.072l192.32,192.368L433.46,238.884
+                                  c43.719-43.79,43.661-114.73-0.128-158.448c-20.985-20.951-49.419-32.728-79.072-32.752c-29.71-0.088-58.215,11.744-79.128,32.848
+                                  l-28.336,28.328c-3.124,3.123-8.188,3.123-11.312,0l-28.32-28.32C186.244,59.419,157.724,47.574,127.996,47.66z"></path>
+				</svg>
+			</a>
+		</div>
+	</div>
+
+	<img class="detail__img" src="{{env.domain}}/images/{{media.type}}/{{media.images[0]}}" [alt]="media.name">
+
+	<div class="detail__body">
+		<div class="detail__year">
+			{{media.year}}<br>
+			<span class="text_theme_muted">Год</span>
+		</div>
+		<div class="detail__duration">
+			{{media.duration}}<br>
+			<span class="text_theme_muted">Длительность</span>
+		</div>
+		<div class="detail__description">{{media.description}}</div>
+		<ul class="detail__list">
+			<ng-container *ngIf="media.originalName">
+				<li>Название:</li>
+				<li>{{media.originalName}}</li>
+			</ng-container>
+			<ng-container *ngIf="media.rating">
+				<li>Рейтинг:</li>
+				<li>{{media.rating}}</li>
+			</ng-container>
+			<ng-container *ngIf="media.country">
+				<li>Страны:</li>
+				<li>{{media.country | join: ', '}}</li>
+			</ng-container>
+			<ng-container *ngIf="media.genre">
+				<li>Жанры:</li>
+				<li>{{media.genre | join: ', '}}</li>
+			</ng-container>
+			<ng-container *ngIf="media.premiere">
+				<li>Премьера:</li>
+				<li>{{media.premiere}}</li>
+			</ng-container>
+			<ng-container *ngIf="media.director">
+				<li>Режиссёры:</li>
+				<li>{{media.director | join: ', '}}</li>
+			</ng-container>
+			<ng-container *ngIf="media.writers">
+				<li>Сценарий:</li>
+				<li>{{media.writers | join: ', '}}</li>
+			</ng-container>
+		</ul>
+	</div>
+</div>
+
+<div class="h1 text-warning text-center mt-3" *ngIf="media === null">Запрашиваемые ресурс не найден</div>
+
+<div class="h1 text-warning text-center mt-3" *ngIf="media === undefined">Загружается...</div>

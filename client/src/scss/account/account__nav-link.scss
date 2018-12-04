@@ -1,0 +1,9 @@
+.account__nav-link {
+  & + & {
+    border-left: none;
+  }
+
+  &.btn_active {
+    pointer-events: none;
+  }
+}

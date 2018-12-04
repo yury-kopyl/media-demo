@@ -1,0 +1,7 @@
+@import "~src/scss/app/app__body";
+@import "~src/scss/app/app__menu";
+@import "~src/scss/menu/index";
+
+:host {
+	@extend %app__body;
+}

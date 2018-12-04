@@ -1,0 +1,21 @@
+<nav class="app__menu menu">
+	<a href="/" class="menu__logo">{{title}}</a>
+	<a class="menu__link" routerLink="/media/movies" routerLinkActive="menu__link_active">Фильмы</a>
+	<a class="menu__link" routerLink="/media/tvSeries" routerLinkActive="menu__link_active">Сериалы</a>
+	<a class="menu__link" routerLink="/media/games" routerLinkActive="menu__link_active">Игры</a>
+</nav>
+
+<app-search></app-search>
+
+<div class="app__account">
+	<app-account *appIsAuthorized="true"></app-account>
+	<app-authorization *appIsAuthorized="false"></app-authorization>
+</div>
+
+<div class="app__content">
+	<router-outlet></router-outlet>
+</div>
+
+<div class="app__filter">
+	<ng-template #filter></ng-template>
+</div>
